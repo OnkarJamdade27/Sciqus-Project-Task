@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  @media (max-width: 1200px) {
+    .container-1 {
+      grid-column: span 12;
+    }
+  
+    .container-2 {
+      grid-column: span 12;
+    }
+  
+    .container-4 {
+      grid-column: span 12;
+    }
+  
+    .container-5 {
+      grid-column: span 12;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex;
+    }
+  
+    .sidebar {
+      transform: translateX(-100%);
+    }
+  
+    .sidebar.active {
+      transform: translateX(0);
+    }
+  
+    .overlay.active {
+      display: block;
+    }
+  
+    .main-content {
+      margin-left: 0;
+      padding: 20px;
+    }
+  
+    .header-content {
+      padding: 0 16px;
+    }
+  
+    .logo span {
+      font-size: 20px;
+    }
+  
+    .page-header h1 {
+      font-size: 24px;
+    }
+  
+    .dashboard-grid {
+      gap: 16px;
+    }
+  
+    .grid-item {
+      padding: 20px;
+    }
+  
+    .carousel-content {
+      height: 250px;
+    }
+  
+    .carousel-caption-custom h3 {
+      font-size: 20px;
+    }
+  
+    .carousel-caption-custom p {
+      font-size: 14px;
+    }
+  
+    .stats-row {
+      flex-direction: column;
+      gap: 12px;
+    }
+  
+    .stat-value {
+      font-size: 24px;
+    }
+  
+    .slider-card,
+    .team-card {
+      flex: 0 0 220px;
+    }
+  
+    .action-buttons {
+      gap: 12px;
+    }
+  
+    .action-btn {
+      padding: 24px;
+    }
+  
+    .action-btn i {
+      font-size: 36px;
+    }
+  
+    .action-btn span {
+      font-size: 18px;
+    }
+  
+    .notification {
+      top: 80px;
+      right: 16px;
+      left: 16px;
+      max-width: none;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header-actions {
+      gap: 8px;
+    }
+  
+    .icon-btn {
+      width: 36px;
+      height: 36px;
+      font-size: 18px;
+    }
+  
+    .logo {
+      gap: 8px;
+    }
+  
+    .logo i {
+      font-size: 24px;
+    }
+  
+    .main-content {
+      padding: 16px;
+    }
+  
+    .grid-item {
+      padding: 16px;
+    }
+  
+    .carousel-content {
+      height: 200px;
+    }
+  
+    .welcome-icon {
+      width: 60px;
+      height: 60px;
+      font-size: 30px;
+    }
+  
+    .welcome-card h2 {
+      font-size: 22px;
+    }
+  
+    .slider-card,
+    .team-card {
+      flex: 0 0 180px;
+    }
+  
+    .slider-btn {
+      width: 36px;
+      height: 36px;
+      font-size: 18px;
+    }
+  }

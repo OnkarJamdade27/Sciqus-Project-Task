@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Productivity Dashboard</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/utils/variables.css">
+    <link rel="stylesheet" href="./css/components/header.css">
+    <link rel="stylesheet" href="./css/components/sidebar.css">
+    <link rel="stylesheet" href="./css/components/dashboard.css">
+    <link rel="stylesheet" href="./css/components/sliders.css">
+    <link rel="stylesheet" href="./css/components/notifications.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    
+    <meta property="og:image" content="https://bolt.new/static/og_default.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
+</head>
+  <body>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="logo">
+          <i class="bi bi-speedometer2"></i>
+          <span>ProDash</span>
+        </div>
+        <div class="header-actions">
+          <button class="icon-btn" title="Notifications">
+            <i class="bi bi-bell"></i>
+            <span class="badge">3</span>
+          </button>
+          <button class="icon-btn" title="Profile">
+            <i class="bi bi-person-circle"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <nav class="sidebar-nav">
+        <a href="#" class="nav-item active">
+          <i class="bi bi-grid-fill"></i>
+          <span>Dashboard</span>
+        </a>
+        <a href="#" class="nav-item">
+          <i class="bi bi-file-earmark-text"></i>
+          <span>Reports</span>
+        </a>
+        <a href="#" class="nav-item">
+          <i class="bi bi-graph-up"></i>
+          <span>Analytics</span>
+        </a>
+        <a href="#" class="nav-item">
+          <i class="bi bi-gear"></i>
+          <span>Settings</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="user-info">
+          <div class="user-avatar">
+            <i class="bi bi-person"></i>
+          </div>
+          <div class="user-details">
+            <div class="user-name">John Doe</div>
+            <div class="user-role">Administrator</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Overlay for mobile -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="container-fluid">
+
+        <!-- Page Header -->
+        <div class="page-header">
+          <h1>Dashboard Overview</h1>
+          <p class="text-muted">Welcome back! Here's what's happening today.</p>
+        </div>
+
+        <!-- Grid Layout for 6 Containers -->
+        <div class="dashboard-grid">
+
+          <!-- Container 1: Bootstrap Carousel -->
+          <div class="grid-item container-1">
+            <div id="featuredCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="0" class="active">.</button>
+                <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="1">.</button>
+                <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="2">.</button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="carousel-content">
+                    <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Team collaboration">
+                    <div class="carousel-caption-custom">
+                      <h3>Boost Your Productivity</h3>
+                      <p>Streamline your workflow with our powerful tools</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="carousel-content">
+                    <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Analytics dashboard">
+                    <div class="carousel-caption-custom">
+                      <h3>Real-time Analytics</h3>
+                      <p>Track your progress with detailed insights</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="carousel-content">
+                    <img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Business meeting">
+                    <div class="carousel-caption-custom">
+                      <h3>Collaborate Seamlessly</h3>
+                      <p>Work together with your team in real-time</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#featuredCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#featuredCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Container 2: Text Content -->
+          <div class="grid-item container-2">
+            <div class="welcome-card">
+              <div class="welcome-icon">
+                <i class="bi bi-sun"></i>
+              </div>
+              <h2>Good Morning!</h2>
+              <p>You have <strong>5 tasks</strong> pending today and <strong>3 meetings</strong> scheduled. Your productivity score is up by <span class="highlight">15%</span> this week.</p>
+              <div class="stats-row">
+                <div class="stat-item">
+                  <div class="stat-value">24</div>
+                  <div class="stat-label">Tasks Done</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-value">8h</div>
+                  <div class="stat-label">Work Hours</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-value">92%</div>
+                  <div class="stat-label">Efficiency</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Container 3: Horizontal Slider -->
+          <div class="grid-item container-3">
+            <div class="slider-container">
+              <h3 class="slider-title">Recent Projects</h3>
+              <div class="slider-wrapper">
+                <button class="slider-btn prev" id="slider1Prev">
+                  <i class="bi bi-chevron-left"></i>
+                </button>
+                <div class="slider-content" id="slider1">
+                  <div class="slider-card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                      <i class="bi bi-briefcase"></i>
+                    </div>
+                    <h4>Website Redesign</h4>
+                    <p>UI/UX improvements for client portal</p>
+                    <div class="progress-bar">
+                      <div class="progress-fill" style="width: 75%;"></div>
+                    </div>
+                    <small>75% Complete</small>
+                  </div>
+                  <div class="slider-card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                      <i class="bi bi-code-square"></i>
+                    </div>
+                    <h4>Mobile App</h4>
+                    <p>Cross-platform development</p>
+                    <div class="progress-bar">
+                      <div class="progress-fill" style="width: 45%;"></div>
+                    </div>
+                    <small>45% Complete</small>
+                  </div>
+                  <div class="slider-card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                      <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+                    <h4>Analytics Dashboard</h4>
+                    <p>Data visualization system</p>
+                    <div class="progress-bar">
+                      <div class="progress-fill" style="width: 90%;"></div>
+                    </div>
+                    <small>90% Complete</small>
+                  </div>
+                  <div class="slider-card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                      <i class="bi bi-people"></i>
+                    </div>
+                    <h4>Team Collaboration</h4>
+                    <p>Internal communication tool</p>
+                    <div class="progress-bar">
+                      <div class="progress-fill" style="width: 60%;"></div>
+                    </div>
+                    <small>60% Complete</small>
+                  </div>
+                </div>
+                <button class="slider-btn next" id="slider1Next">
+                  <i class="bi bi-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Container 4: Static Content -->
+          <div class="grid-item container-4">
+            <h3 class="section-title">Quick Stats</h3>
+            <div class="info-cards">
+              <div class="info-card">
+                <div class="info-icon blue">
+                  <i class="bi bi-check-circle"></i>
+                </div>
+                <div class="info-content">
+                  <h4>Completed</h4>
+                  <p class="info-value">156</p>
+                  <small class="text-success"><i class="bi bi-arrow-up"></i> 12% from last month</small>
+                </div>
+              </div>
+              <div class="info-card">
+                <div class="info-icon orange">
+                  <i class="bi bi-clock"></i>
+                </div>
+                <div class="info-content">
+                  <h4>In Progress</h4>
+                  <p class="info-value">23</p>
+                  <small class="text-warning"><i class="bi bi-dash"></i> Same as last month</small>
+                </div>
+              </div>
+              <div class="info-card">
+                <div class="info-icon green">
+                  <i class="bi bi-trophy"></i>
+                </div>
+                <div class="info-content">
+                  <h4>Achievements</h4>
+                  <p class="info-value">48</p>
+                  <small class="text-success"><i class="bi bi-arrow-up"></i> 8% increase</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Container 5: Two Buttons -->
+          <div class="grid-item container-5">
+            <div class="button-container">
+              <h3 class="section-title">Quick Actions</h3>
+              <div class="action-buttons">
+                <button class="action-btn btn-a">
+                  <i class="bi bi-plus-circle"></i>
+                  <span>Button A</span>
+                  <small>Create New Task</small>
+                </button>
+                <button class="action-btn btn-b">
+                  <i class="bi bi-download"></i>
+                  <span>Button B</span>
+                  <small>Export Report</small>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Container 6: Another Slider -->
+          <div class="grid-item container-6">
+            <div class="slider-container">
+              <h3 class="slider-title">Team Members</h3>
+              <div class="slider-wrapper">
+                <button class="slider-btn prev" id="slider2Prev">
+                  <i class="bi bi-chevron-left"></i>
+                </button>
+                <div class="slider-content team-slider" id="slider2">
+                  <div class="team-card">
+                    <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Team member">
+                    <h4>Sarah Johnson</h4>
+                    <p>Product Manager</p>
+                    <div class="team-stats">
+                      <span><i class="bi bi-check-circle"></i> 45 tasks</span>
+                    </div>
+                  </div>
+                  <div class="team-card">
+                    <img src="https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Team member">
+                    <h4>Michael Chen</h4>
+                    <p>Lead Developer</p>
+                    <div class="team-stats">
+                      <span><i class="bi bi-check-circle"></i> 52 tasks</span>
+                    </div>
+                  </div>
+                  <div class="team-card">
+                    <img src="https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Team member">
+                    <h4>Emily Davis</h4>
+                    <p>UX Designer</p>
+                    <div class="team-stats">
+                      <span><i class="bi bi-check-circle"></i> 38 tasks</span>
+                    </div>
+                  </div>
+                  <div class="team-card">
+                    <img src="https://images.pexels.com/photos/3785077/pexels-photo-3785077.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Team member">
+                    <h4>David Wilson</h4>
+                    <p>Data Analyst</p>
+                    <div class="team-stats">
+                      <span><i class="bi bi-check-circle"></i> 41 tasks</span>
+                    </div>
+                  </div>
+                </div>
+                <button class="slider-btn next" id="slider2Next">
+                  <i class="bi bi-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
